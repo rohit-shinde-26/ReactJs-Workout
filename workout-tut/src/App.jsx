@@ -1,35 +1,54 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import ListRender from "./Components/ListRender";
+import MyEvent from "./Components/MyEvent";
+import MyProps from "./Components/MyProps";
+import MyState from "./Components/MyState";
+import MyStateArray from "./Components/MyStateArray";
+import MyStateCounter from "./Components/MyStateCounter";
+import StateObject from "./Components/StateObject";
+import Users from "./Components/Users";
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const hobby = "Gaming";
+  const [users, setUsers] = useState([
+    { id: 1, name: "Ram", age: 22, email: "ram@google.com" },
+    { id: 2, name: "Sham", age: 15, email: "sham@google.com" },
+    { id: 3, name: "Abhi", age: 62, email: "abhay@google.com" },
+  ]);
+  function increment(id) {
+    // console.log("event clicked");
+    // const newArr = [];
+    // for (let user of newArr) {
+    //   if (user.id === id) {
+    //     newArr.push({ ...user, age: user.age + 1 });
+    //   } else {
+    //     newArr.push(user);
+    //   }
+    // }
+    // setUsers(newArr);
 
+    setUsers((prevState) => {
+      return users.map((user) => {
+        if (user.id === id) {
+          return { ...user, age: user.age + 1 };
+        } else {
+          return user;
+        }
+      });
+    });
+  }
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      {/* <MyProps hobby={hobby} /> */}
+      {/* <ListRender /> */}
+      {/* <MyEvent /> */}
+      {/* <MyState /> */}
+      {/* <MyStateArray /> */}
+      {/* <MyStateCounter /> */}
+      {/* <StateObject /> */}
+      <Users users={users} increment={increment} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

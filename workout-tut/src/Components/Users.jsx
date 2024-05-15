@@ -1,6 +1,6 @@
 import React from "react";
 import User from "./User";
-function Users({ users }) {
+function Users({ users, increment }) {
   return (
     <div>
       {/* {users.map((user) => {
@@ -13,7 +13,7 @@ function Users({ users }) {
         );
       })} */}
       {users.map((user) => {
-        return <User {...user} key={user.id} />;
+        return <User {...user} increment={increment} key={user.id} />;
       })}
     </div>
   );
