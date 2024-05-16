@@ -8,6 +8,7 @@ import MyStateCounter from "./Components/MyStateCounter";
 import StateObject from "./Components/StateObject";
 import Users from "./Components/Users";
 import FormInput from "./Components/FormInput";
+import Login from "./Components/Login";
 function App() {
   // const hobby = "Gaming";
   const [users, setUsers] = useState([
@@ -47,7 +48,8 @@ function App() {
       {/* <MyStateCounter /> */}
       {/* <StateObject /> */}
       {/* <Users users={users} increment={increment} /> */}
-      <FormInput />
+      {/* <FormInput /> */}
+      <Login />
     </>
   );
 }
