@@ -7,7 +7,7 @@ import MyStateArray from "./Components/MyStateArray";
 import MyStateCounter from "./Components/MyStateCounter";
 import StateObject from "./Components/StateObject";
 import Users from "./Components/Users";
-
+import FormInput from "./Components/FormInput";
 function App() {
   // const hobby = "Gaming";
   const [users, setUsers] = useState([
@@ -46,7 +46,8 @@ function App() {
       {/* <MyStateArray /> */}
       {/* <MyStateCounter /> */}
       {/* <StateObject /> */}
-      <Users users={users} increment={increment} />
+      {/* <Users users={users} increment={increment} /> */}
+      <FormInput />
     </>
   );
 }
