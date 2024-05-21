@@ -2,6 +2,8 @@ import { useState } from "react";
 import uuid from "react-uuid";
 import "./App.css";
 import MyBikes from "./MyBikes";
+import WhiteChar from "./WhiteChar";
+import SetInitialStateFunction from "./SetInitialStateFunction";
 
 function App() {
   const [bikes, setBikes] = useState([
@@ -21,12 +23,14 @@ function App() {
 
   return (
     <>
-      <ol>
+      {/* <ol>
         {bikes.map((bike) => {
           return <MyBikes name={bike.name} key={bike.id} />;
         })}
         <button onClick={HandleBike}>Add Bike</button>
-      </ol>
+      </ol> */}
+      {/* <WhiteChar /> */}
+      <SetInitialStateFunction />
     </>
   );
 }
