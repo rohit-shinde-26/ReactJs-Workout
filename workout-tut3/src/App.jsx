@@ -23,14 +23,14 @@ function App() {
 
   return (
     <>
-      {/* <ol>
+      <ol>
         {bikes.map((bike) => {
           return <MyBikes name={bike.name} key={bike.id} />;
         })}
-        <button onClick={HandleBike}>Add Bike</button>
-      </ol> */}
+      </ol>
+      <button onClick={HandleBike}>Add</button>
       {/* <WhiteChar /> */}
-      <SetInitialStateFunction />
+      {/* <SetInitialStateFunction /> */}
     </>
   );
 }
