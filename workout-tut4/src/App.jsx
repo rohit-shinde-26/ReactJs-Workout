@@ -1,10 +1,10 @@
 import "./App.css";
-import FetchDataExample from "./Components/FetchDataExample";
+import ErrorLoading from "./Components/ErrorLoading";
 
 function App() {
   return (
     <>
-      <FetchDataExample />
+      <ErrorLoading />
     </>
   );
 }
